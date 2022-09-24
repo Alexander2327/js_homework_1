@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+    <script>
+        let n = Math.floor(Math.random() * 1000);
+        console.log('Загаданное число:', n);
+        while (true) {
+          const guessNum = prompt('Введите ваше число!');
+          console.log('Число игрока:', guessNum);
+
+          if (isNaN(guessNum)) {
+            alert('Вы ввели не число!');
+          } else if (+guessNum >= 1000) {
+            alert('Число должно быть от 0 до 999!');
+          } else if (+guessNum === n) {
+            alert('Вы угадали!');
+            break;
+          } else if (+guessNum < n) {
+            alert('Загаданное число больше!');
+          } else if (+guessNum > n) {
+            alert('Загаданное число меньше!');
+          }
+      }
+      </script>
+</body>
+</html>
